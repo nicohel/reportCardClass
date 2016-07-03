@@ -7,11 +7,11 @@ public class ReportCard {
 
     //Set initial variables
     String studentName = "Alex Springer";
-    int chemistryGrade = 92;
-    int calculusGrade = 98;
-    int computerScienceGrade = 96;
-    int biologyGrade = 89;
-    int avgGrade = (chemistryGrade + calculusGrade + computerScienceGrade + biologyGrade)/4;
+    int mChemistryGrade = 92;
+    int mCalculusGrade = 98;
+    int mComputerScienceGrade = 96;
+    int mBiologyGrade = 89;
+    int mAvgGrade = (mChemistryGrade + mCalculusGrade + mComputerScienceGrade + mBiologyGrade)/4;
 
 
     // Get or set the name of the student on this report card
@@ -19,12 +19,24 @@ public class ReportCard {
     public String toString(){
         String fullReport = "Name: " + studentName + ";\n" +
                 "Course Grades:\n" +
-                "Chemistry: " + chemistryGrade + " percent\n" +
-                "Calculus: " + calculusGrade + " percent\n" +
-                "Computer Science: " + computerScienceGrade + "percent\n" +
-                "Biology: " + biologyGrade + " percent;\n" +
-                "Current Average: " + avgGrade + " percent";
+                "Chemistry: " + mChemistryGrade + " percent\n" +
+                "Calculus: " + mCalculusGrade + " percent\n" +
+                "Computer Science: " + mComputerScienceGrade + "percent\n" +
+                "Biology: " + mBiologyGrade + " percent;\n" +
+                "Current Average: " + mAvgGrade + " percent";
         return fullReport;
+    }
+    
+    public ReportCard(String vstudentName,
+            int vchemistryGrade,
+            int vcalculusGrade,
+            int vcomputerScienceGrade,
+            int vbiologyGrade){
+            vstudentName = studentName;
+            vchemistryGrade = mChemistryGrade;
+            vcalculusGrade = mCalculusGrade;
+            vcomputerScienceGrade = mComputerScienceGrade;
+            vbiologyGrade= mBiologyGrade;
     }
 
     public String getStudentName() {
@@ -35,33 +47,33 @@ public class ReportCard {
     }
     // Get or set the grade for the Chemistry course
     public int getChemistryGrade() {
-        return chemistryGrade;
+        return mChemistryGrade;
     }
     public void setChemistryGrade(int grade) {
-        chemistryGrade = grade;
+        mChemistryGrade = grade;
     }
     // Get or set the grade for the Calculus course
     public int getCalculusGrade() {
-        return calculusGrade;
+        return mCalculusGrade;
     }
     public void setCalculusGrade(int grade) {
-        calculusGrade = grade;
+        mCalculusGrade = grade;
     }
 
     // Get or set the grade for the Computer Science course
     public int getComputerScienceGrade() {
-        return computerScienceGrade;
+        return mComputerScienceGrade;
     }
     public void setComputerScienceGrade(int grade) {
-        computerScienceGrade = grade;
+        mComputerScienceGrade = grade;
     }
 
     // Get or set the grade for the biology course
     public int getBiologyGrade() {
-        return biologyGrade;
+        return mBiologyGrade;
     }
     public void setBiologyGrade(int grade) {
-        biologyGrade = grade;
+        mBiologyGrade = grade;
     }
 
 }
